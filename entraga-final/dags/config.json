@@ -1,0 +1,32 @@
+{
+  "stocks": [
+    { "name": "Apple", "symbol": "AAPL" },
+    { "name": "Google", "symbol": "GOOGL" },
+    { "name": "Coca Cola", "symbol": "KO" },
+    { "name": "Microsoft", "symbol": "MSFT" },
+    { "name": "Amazon", "symbol": "AMZN" },
+    { "name": "JP Morgan", "symbol": "JPM" },
+    { "name": "Spotify", "symbol": "SPOT" },
+    { "name": "Disney", "symbol": "DIS" },
+    { "name": "Tesla", "symbol": "TSLA" },
+    { "name": "Intel", "symbol": "INTC" }
+  ],
+  "thresholds": [
+    { "symbol": "AAPL", "min": 33, "max": 200 },
+    { "symbol": "KO", "min": 33, "max": 42 },
+    { "symbol": "SPOT", "min": 33, "max": 42 },
+    { "symbol": "INTC", "min": 33, "max": 42 }
+  ],
+  "info": {
+    "AAPL": { "name": "Apple" },
+    "GOOGL": { "name": "Google" },
+    "KO": { "name": "Coca Cola" },
+    "MSFT": { "name": "Microsoft" },
+    "AMZN": { "name": "Amazon" },
+    "JPM": { "name": "JP Morgan" },
+    "SPOT": { "name": "Spotify" },
+    "DIS": { "name": "Disney" },
+    "TSLA": { "name": "Tesla" },
+    "INTC": { "name": "Intel" }
+  }
+}
