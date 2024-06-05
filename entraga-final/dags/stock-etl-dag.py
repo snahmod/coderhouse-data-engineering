@@ -163,13 +163,13 @@ with DAG(
       conn().commit()
       conn().close()
   
-  def send_email(body_text):
+  def send_email(to, body_text):
     smtp = smtplib.SMTP('smtp.gmail.com', 587)
     smtp.starttls()
     smtp.login(os.environ['EMAIL_SENDER'],os.environ['EMAIL_APP_PASSWORD'])
     subject='Stock ETL | Alert Report'
     message='Subject: {}\n\n{}'.format(subject,body_text)
-    smtp.sendmail('info@stocketl.com','santinahmod@gmail.com',message)
+    smtp.sendmail('info@stocketl.com', to, message)
     print('Exito')
 
   def report_alerts(**context):
@@ -196,7 +196,7 @@ with DAG(
 
     for alert in alerts:
       body_text += f"- {alert['name']} ({alert['symbol']}) current price ${'{:5,.2f}'.format(alert['cp'])} is {alert['type']} of limit ${'{:5,.2f}'.format(alert['limit'])}\n"
-    send_email(body_text)
+    send_email(config()['email'], body_text)
 
 
 
